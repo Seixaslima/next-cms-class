@@ -4,7 +4,6 @@ import { Box, Link, Text, theme } from "../../../theme/components";
 const PREVIEW_TOKEN = process.env.PREVIEW_TOKEN;
 
 export function Footer() {
-  console.log(getCMSContent(""));
   const description = getCMSContent("globalContent.globalFooter.description");
   return (
     <Box

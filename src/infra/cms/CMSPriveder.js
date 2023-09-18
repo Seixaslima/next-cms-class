@@ -11,6 +11,11 @@ export function getCMSContent(path = "") {
   if (path === "") return cmsContent;
 
   const output = get(cmsContent, path);
+
+  if (!output)
+    throw new Error(
+      `Não foi pessivel encontrar a chave "${path}". Reveja sua query e tente novamente`
+    );
   return output;
 }
 
