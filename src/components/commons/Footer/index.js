@@ -1,8 +1,11 @@
+import { getCMSContent } from "../../../infra/cms/cmsPriveder";
 import { Box, Link, Text, theme } from "../../../theme/components";
 
 const PREVIEW_TOKEN = process.env.PREVIEW_TOKEN;
 
-export function Footer({ description }) {
+export function Footer() {
+  console.log(getCMSContent(""));
+  const description = getCMSContent("globalContent.globalFooter.description");
   return (
     <Box
       tag="footer"
@@ -30,7 +33,7 @@ export function Footer({ description }) {
         </Text>
         {process.env.NODE_ENV !== "production" && (
           <Link href="/api/preview?password=SENHASEGURA">
-            trogle preview mode
+            toggle preview mode
           </Link>
         )}
       </Box>
