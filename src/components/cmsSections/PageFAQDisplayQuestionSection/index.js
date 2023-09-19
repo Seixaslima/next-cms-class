@@ -1,7 +1,6 @@
 import { Box, Image, Link, Text, theme } from "../../../theme/components";
 
 export default function PageFAQDisplayQuestionSection(props) {
-  console.log("faq", props.categories);
   const categories = props.categories;
   return (
     <Box
